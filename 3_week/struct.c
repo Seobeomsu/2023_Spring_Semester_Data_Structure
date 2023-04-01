@@ -29,10 +29,11 @@ int main()
   printf("st3.studentId = %d\n", st3.studentId);
   printf("st3.grade = %c\n", st3.grade);
   /* equality test */
-  // if (st3 == st2) /* not working */  // GCC 컴파일러는 전체구조의 동등성검사를 할수없다.
-  //   printf("equal\n");
-  // else
-  //   printf("not equal\n");
+  if (st3.lastName == st2.lastName||st3.studentId == st2.studentId||st3.grade == st2.grade)
+  // st3 == st2 가 작동하지않아 일일이 내부의 요소들을 한개씩 비교해주어야한다.
+    printf("equal\n");
+  else
+    printf("not equal\n");
   printf("\n[-----[SeoBeomsu][2019019014]-----]\n");
   return 0;
 }
